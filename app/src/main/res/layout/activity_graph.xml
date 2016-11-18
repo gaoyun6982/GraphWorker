@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_graph"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="0dp"
+    android:background="@color/colorBackgroundBlue"
+    tools:context="gaoyun.graphworker.GraphActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            >
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <TextView
+                android:textAlignment="center"
+                android:text="TextView"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/graphMatrixText" />
+            </HorizontalScrollView>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            >
+
+            <TextView
+                android:textAlignment="center"
+                android:text="TextView"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/graphCharacteristicText" />
+
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/newVerticeText"
+                        android:textAlignment="center"
+                        android:text="New vertice"
+                        android:layout_marginTop="10dp"/>
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/newVerticeText"
+                        android:text="Create Vertice"
+                        android:onClick="createVertice"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/changeWeightText"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/fstEdgeToChangeWeight"
+                        android:text="Change weight"
+                        android:layout_marginTop="10dp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/fstEdgeToChangeWeight"
+                        android:layout_toEndOf="@+id/changeWeightText"
+                        android:hint="First edge"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sndEdgeToChangeWeight"
+                        android:layout_toEndOf="@+id/fstEdgeToChangeWeight"
+                        android:hint="Second edge"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/newWeight"
+                        android:layout_below="@+id/changeWeightText"
+                        android:layout_toEndOf="@+id/fstEdgeToChangeWeight"
+                        android:hint="New Weight"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/newWeight"
+                        android:text="Change weight"
+                        android:onClick="changeWeight"/>
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/adjCheckText"
+                        android:textAlignment="center"
+                        android:layout_alignBottom="@+id/fstEdgeToCheckAdjacency"
+                        android:text="Adjacency check"
+                        android:layout_marginTop="10dp"/>
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:id="@+id/fstEdgeToCheckAdjacency"
+                        android:layout_toEndOf="@+id/adjCheckText"
+                        android:hint="First edge"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/sndEdgeToCheckAdjacency"
+                        android:layout_toEndOf="@+id/fstEdgeToCheckAdjacency"
+                        android:hint="Second edge"
+                        android:textColorHint="@color/colorAccent"
+                        android:inputType="numberDecimal"
+                        />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginStart="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@+id/adjCheckText"
+                        android:text="Check Adjacency"
+                        android:onClick="checkAdjacency"/>
+
+                </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
